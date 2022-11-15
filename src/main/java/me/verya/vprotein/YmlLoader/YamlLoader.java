@@ -36,13 +36,13 @@ public class YamlLoader {
 
     public static List<GameServer> load(ProxyServer proxy)
     {
-        //ugly hardcoded config because I don't want to spend time on snake-yml, pr opened 
+        //ugly hardcoded config because I don't want to spend time on snake-yml, pr opened
         List<GameServer> serversList = new ArrayList<>();
         var supportedGame = new ArrayList<String>();
         supportedGame.add("single/baba");
         supportedGame.add("single/cube");
         supportedGame.add("single/tombstone");
-        supportedGame.add("caca");
+
         var server1 = new GameServer(proxy.registerServer(new ServerInfo("test1", InetSocketAddress.createUnresolved("192.168.0.186", 20000))),
                         supportedGame);
         serversList.add(server1);
